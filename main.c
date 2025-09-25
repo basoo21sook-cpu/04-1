@@ -5,19 +5,23 @@
 
 int main(int argc, char *argv[]) {
 	
-	int x,y,z,m;
-	int a,b,c;
-	x=2;
-	z=1;
-	a=3;
-	b=4;
-	c=5;
+	int a, b; 
+	int sum,diff,prod,quot,mod;
 	
-	y=a*x*x+b*x+c;
+	printf("두 개의 정수를 입력하세요 :");
+	scanf("%i %i", &a,&b);
 	
-	m=(x+y+z)/3;
+	sum = a+b;
+	diff= a-b;
+	prod= a*b;
+	quot= a/b;
+	mod=a%b;
 	
+	printf("%d+%d=%d\n",a,b,sum);
+	printf("%d-%d=%d\n",a,b,diff);
+	printf("%d-%d=%d\n",a,b,prod);
+	printf("%d/%d=%d\n",a,b,quot);
+	printf("%d %% %d = %d\n",a,b,mod);
 	
-	printf("y=%d, m=%d",y,m);
 	return 0;
 }
