@@ -5,23 +5,16 @@
 
 int main(int argc, char *argv[]) {
 	
-	int a, b; 
-	int sum,diff,prod,quot,mod;
+	int total;
+	int minutes, seconds;
 	
-	printf("두 개의 정수를 입력하세요 :");
-	scanf("%i %i", &a,&b);
+	printf("Input the seconds: ");
+	scanf("%d", &total);
 	
-	sum = a+b;
-	diff= a-b;
-	prod= a*b;
-	quot= a/b;
-	mod=a%b;
+	minutes = total/60;
+	seconds = total % 60;
 	
-	printf("%d+%d=%d\n",a,b,sum);
-	printf("%d-%d=%d\n",a,b,diff);
-	printf("%d-%d=%d\n",a,b,prod);
-	printf("%d/%d=%d\n",a,b,quot);
-	printf("%d %% %d = %d\n",a,b,mod);
+	printf("The time is %d:%d\n", minutes, seconds);
 	
 	return 0;
 }
