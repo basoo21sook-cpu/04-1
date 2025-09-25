@@ -5,16 +5,22 @@
 
 int main(int argc, char *argv[]) {
 	
-	int year;
-	int leapyear;
+	unsigned int x;
+	int b;
 	
-	printf("Input the year: ");
-	scanf("%d", &year);
+	printf("Input a number: ");
+	scanf("%ui", &x);
 	
-	leapyear= ( (year%4==0) && (year%100 !=0) ) || (year%400==0);
+	for (b=0; x!=0; x >>=1)
+{
+		if(x & 1) //x 이진수 끝자리가 1과 같다 
+		{
+			b++;
+		}
 
+}
 	
-	printf("is the year %d the leap year? : %d\n", year, leapyear);
+	printf("The result is : %i\n", b);
 	
 	return 0;
 }
