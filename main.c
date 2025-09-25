@@ -5,22 +5,18 @@
 
 int main(int argc, char *argv[]) {
 	
-	unsigned int x;
-	int b;
+	int total;
+	int hours, minutes, seconds;
 	
-	printf("Input a number: ");
-	scanf("%ui", &x);
+	printf("Input the seconds:");
+	scanf("%d", &total);
 	
-	for (b=0; x!=0; x >>=1)
-{
-		if(x & 1) //x 이진수 끝자리가 1과 같다 
-		{
-			b++;
-		}
-
-}
+	hours = total/3600;
+	minutes = (total%3600)/60;
+	seconds= total%60;
 	
-	printf("The result is : %i\n", b);
+	printf("The time for %d seconds is %d:%d:%d\n", total, hours, minutes, seconds);
+	
 	
 	return 0;
 }
